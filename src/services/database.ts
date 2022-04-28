@@ -3,6 +3,9 @@ import * as dotenv from "dotenv";
 
 export const collections: { ethereum?: mongoDB.Collection } = {}
 
+/**
+ * Connects to database
+ */
 export async function connectToDatabase () {
     dotenv.config();
  

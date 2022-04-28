@@ -1,4 +1,5 @@
 {
     "NftFetchApi": "https://api.nftport.xyz/v0/nfts/",
-    "AuthorizationKey": "123"
+    "AuthorizationKey": "923649cd-86ee-422a-8596-a6056f3474d0",
+    "pageSize": 50
 }
