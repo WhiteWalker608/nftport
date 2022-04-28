@@ -80,12 +80,24 @@ export async function fetchNFTsFromContract(contractAddress: string, chain: stri
     }
 }
 
+/**
+ * Finds nfts with name
+ * @param name 
+ * @param chain 
+ * @returns  
+ */
 export async function findNftsWithName(name: string, chain: string) {
     const query = {name: name};
     const nfts = (await collections[chain].find(query).toArray()) as Nft[];
     return nfts;
 }
 
+/**
+ * Finds nfts with contract address
+ * @param contractAddress 
+ * @param chain 
+ * @returns  
+ */
 export async function findNftsWithContractAddress(contractAddress: string, chain: string) {
     const query = {contract_address: contractAddress};
     const nfts = (await collections[chain].find(query).toArray()) as Nft[];
@@ -93,6 +105,13 @@ export async function findNftsWithContractAddress(contractAddress: string, chain
 }
 
 
+/**
+ * Finds nfts with contract address and token id
+ * @param contractAddress 
+ * @param tokenId 
+ * @param chain 
+ * @returns  
+ */
 export async function findNftsWithContractAddressAndTokenId(contractAddress: string, tokenId: string, chain: string) {
     const query = {contract_address: contractAddress, token_id: tokenId};
     const nfts = (await collections[chain].findOne(query)) as Nft;
